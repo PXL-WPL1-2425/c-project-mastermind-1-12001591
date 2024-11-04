@@ -8,10 +8,38 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button x:Name="valideButton" Content="Check code" HorizontalAlignment="Left" Margin="325,188,0,0" VerticalAlignment="Top" Height="49" Width="103"/>
-        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="78,61,0,0" VerticalAlignment="Top" Width="150" Height="33"/>
-        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="233,61,0,0" VerticalAlignment="Top" Width="150" Height="33"/>
-        <ComboBox x:Name="comboBox4" HorizontalAlignment="Left" Margin="543,61,0,0" VerticalAlignment="Top" Width="150" Height="33"/>
-        <ComboBox x:Name="comboBox3" HorizontalAlignment="Left" Margin="388,61,0,0" VerticalAlignment="Top" Width="150" Height="33"/>
+        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="78,61,0,0" VerticalAlignment="Top" Width="150" Height="33">
+            <ComboBoxItem Content="Blue"/>
+            <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Yellow"/>
+            <ComboBoxItem Content="Oranje"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="White"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="233,61,0,0" VerticalAlignment="Top" Width="150" Height="33">
+            <ComboBoxItem Content="Blue"/>
+            <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Yellow"/>
+            <ComboBoxItem Content="Oranje"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="White"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBox4" HorizontalAlignment="Left" Margin="543,61,0,0" VerticalAlignment="Top" Width="150" Height="33">
+            <ComboBoxItem Content="Blue"/>
+            <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Yellow"/>
+            <ComboBoxItem Content="Oranje"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="White"/>
+        </ComboBox>
+        <ComboBox x:Name="comboBox3" HorizontalAlignment="Left" Margin="388,61,0,0" VerticalAlignment="Top" Width="150" Height="33">
+            <ComboBoxItem Content="Blue"/>
+            <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Yellow"/>
+            <ComboBoxItem Content="Oranje"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="White"/>
+        </ComboBox>
 
     </Grid>
 </Window>

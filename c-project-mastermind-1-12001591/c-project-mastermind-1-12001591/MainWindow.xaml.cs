@@ -53,7 +53,7 @@ namespace c_project_mastermind_1_12001591
             Title = "MasterMind (" + sb.ToString() + ")";
         
         }
-            
+       
     }
 
 }
