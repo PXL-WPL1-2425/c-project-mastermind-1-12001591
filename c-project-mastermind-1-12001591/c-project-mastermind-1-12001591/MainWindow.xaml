@@ -7,39 +7,43 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="valideButton" Content="Check code" HorizontalAlignment="Left" Margin="325,188,0,0" VerticalAlignment="Top" Height="49" Width="103"/>
-        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="78,61,0,0" VerticalAlignment="Top" Width="150" Height="33">
+        <Button x:Name="valideButton" Content="Check code" HorizontalAlignment="Center" Margin="0,289,0,0" VerticalAlignment="Top" Height="49" Width="104" Click="valideButton_Click"/>
+        <ComboBox x:Name="comboBox1" SelectionChanged="ComboBox1Collor" HorizontalAlignment="Left" Margin="78,61,0,0" VerticalAlignment="Top" Width="150" Height="33">
             <ComboBoxItem Content="Blue"/>
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Yellow"/>
-            <ComboBoxItem Content="Oranje"/>
+            <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="Green"/>
             <ComboBoxItem Content="White"/>
         </ComboBox>
-        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="233,61,0,0" VerticalAlignment="Top" Width="150" Height="33">
+        <ComboBox x:Name="comboBox2" SelectionChanged="ComboBox2Collor" HorizontalAlignment="Left" Margin="233,61,0,0" VerticalAlignment="Top" Width="150" Height="33">
             <ComboBoxItem Content="Blue"/>
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Yellow"/>
-            <ComboBoxItem Content="Oranje"/>
+            <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="Green"/>
             <ComboBoxItem Content="White"/>
         </ComboBox>
-        <ComboBox x:Name="comboBox4" HorizontalAlignment="Left" Margin="543,61,0,0" VerticalAlignment="Top" Width="150" Height="33">
+        <ComboBox x:Name="comboBox4" SelectionChanged="ComboBox4Collor" HorizontalAlignment="Left" Margin="543,61,0,0" VerticalAlignment="Top" Width="150" Height="33">
             <ComboBoxItem Content="Blue"/>
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Yellow"/>
-            <ComboBoxItem Content="Oranje"/>
+            <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="Green"/>
             <ComboBoxItem Content="White"/>
         </ComboBox>
-        <ComboBox x:Name="comboBox3" HorizontalAlignment="Left" Margin="388,61,0,0" VerticalAlignment="Top" Width="150" Height="33">
+        <ComboBox x:Name="comboBox3" SelectionChanged="ComboBox3Collor" HorizontalAlignment="Left" Margin="388,61,0,0" VerticalAlignment="Top" Width="150" Height="33">
             <ComboBoxItem Content="Blue"/>
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Yellow"/>
-            <ComboBoxItem Content="Oranje"/>
+            <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="Green"/>
             <ComboBoxItem Content="White"/>
         </ComboBox>
+        <Label x:Name="colorLabel1" Content="" HorizontalAlignment="Left" Margin="78,99,0,0" VerticalAlignment="Top" Width="150" Height="99"/>
+        <Label x:Name="colorLabel2" Content="" HorizontalAlignment="Left" Margin="233,99,0,0" VerticalAlignment="Top" Width="150" Height="99"/>
+        <Label x:Name="colorLabel3" Content="" HorizontalAlignment="Left" Margin="390,99,0,0" VerticalAlignment="Top" Width="148" Height="99"/>
+        <Label x:Name="colorLabel4" Content="" HorizontalAlignment="Left" Margin="543,99,0,0" VerticalAlignment="Top" Height="99" Width="150"/>
 
     </Grid>
 </Window>
