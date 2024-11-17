@@ -18,44 +18,43 @@ namespace c_project_mastermind_1_12001591
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        private string color1, color2, color3, color4;
         public MainWindow()
         {
             InitializeComponent();
 
-          
-           StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
 
-           Random rnd = new Random();
-           string color1 = RandomColor(rnd);
-           string color2 = RandomColor(rnd);
-           string color3 = RandomColor(rnd);
-           string color4 = RandomColor(rnd);
-           Title = $"MasterMind({color1},{color2},{color3},{color4},)";
-         
+            Random rnd = new Random();
+            color1 = RandomColor(rnd);  
+            color2 = RandomColor(rnd);  
+            color3 = RandomColor(rnd);  
+            color4 = RandomColor(rnd);  
+
+            Title = $"MasterMind({color1},{color2},{color3},{color4})";
         }
-        private string RandomColor (Random rnd)
+        private string RandomColor(Random rnd)
         {
             int randomNumber = rnd.Next(1, 7);
             switch (randomNumber)
             {
                 case 1:
                     return "Blue";
-                    
+
                 case 2:
                     return "Red";
-                    
+
                 case 3:
                     return "White";
-                    
+
                 case 4:
                     return "Yellow";
-                    
+
                 case 5:
                     return "Orange";
-                    
+
                 case 6:
-                    return "Green"; 
+                    return "Green";
                 default: return "";
             }
         }
@@ -86,16 +85,17 @@ namespace c_project_mastermind_1_12001591
                     break;
             }
         }
-       private void ComboBox1Collor(object sender, SelectionChangedEventArgs e)
+
+        private void ComboBox1Color(object sender, SelectionChangedEventArgs e)
         {
             if (comboBox1.SelectedItem != null)
             {
                 string newColor = (comboBox1.SelectedItem as ComboBoxItem).Content.ToString();
                 NewLabelColor(colorLabel1, newColor);
             }
-            
+
         }
-        private void ComboBox2Collor(object sender, SelectionChangedEventArgs e)
+        private void ComboBox2Color(object sender, SelectionChangedEventArgs e)
         {
             if (comboBox2.SelectedItem != null)
             {
@@ -104,7 +104,7 @@ namespace c_project_mastermind_1_12001591
             }
 
         }
-        private void ComboBox3Collor(object sender, SelectionChangedEventArgs e)
+        private void ComboBox3Color(object sender, SelectionChangedEventArgs e)
         {
             if (comboBox3.SelectedItem != null)
             {
@@ -113,7 +113,7 @@ namespace c_project_mastermind_1_12001591
             }
 
         }
-        private void ComboBox4Collor(object sender, SelectionChangedEventArgs e)
+        private void ComboBox4Color(object sender, SelectionChangedEventArgs e)
         {
             if (comboBox4.SelectedItem != null)
             {
@@ -124,10 +124,40 @@ namespace c_project_mastermind_1_12001591
         }
         private void valideButton_Click(object sender, RoutedEventArgs e)
         {
-            
-           
+            string comboBox1Color = (comboBox1.SelectedValue as ComboBoxItem)?.Content.ToString();  
+            string comboBox2Color = (comboBox2.SelectedValue as ComboBoxItem)?.Content.ToString();
+            string comboBox3Color = (comboBox3.SelectedValue as ComboBoxItem)?.Content.ToString();
+            string comboBox4Color = (comboBox4.SelectedValue as ComboBoxItem)?.Content.ToString();
+            CompareCodeWithLabel(comboBox1Color, comboBox2Color, comboBox3Color, comboBox4Color);
+        }
+        private void SameColor(Label label, string ChosenColor, string correctColor, int place)
+        {
+            if (ChosenColor == correctColor)
+            {
+                label.BorderBrush = new SolidColorBrush(Colors.DarkRed);
+                label.BorderThickness = new Thickness(5);
+            }
+            else if (ChosenColor == color1 || ChosenColor == color2 || ChosenColor == color3 || ChosenColor == color4)
+            {
+                label.BorderBrush = new SolidColorBrush(Colors.Wheat);
+                label.BorderThickness = new Thickness(5);
+            }
+            else
+            {
+                label.BorderBrush = new SolidColorBrush(Colors.Transparent);
+                label.BorderThickness = new Thickness(0);
+            }
+
+
+        }
+        private void CompareCodeWithLabel(string input1, string input2, string input3, string input4)
+        {
+
+            SameColor(colorLabel1, input1, color1, 1);
+            SameColor(colorLabel2, input2, color2, 2);
+            SameColor(colorLabel3, input3, color3, 3);
+            SameColor(colorLabel4, input4, color4, 4);
         }
     }
-
 }
  
